@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do</title>
+</head>
+<body>
+    <style>
+        .Contenedor{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+           /*background-color: aqua;*/
+            justify-content: space-evenly;
+        }
+
+        .Caja{
+            background-color: #6610F2;
+            width: 30%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            border-radius: 10%;
+            text-align: center;
+            align-items: center;
+            padding-top: 1%;
+        }
+
+        .Titulo{
+            font-size: 100px;
+        }
+
+        label{
+            color:white;
+        }
+
+        .Formulario {
+            margin: 10px auto;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-align: left;
+        }
+
+        .Formulario input[type="text"],
+        .Formulario input[type="email"],
+        .Formulario input[type="password"],
+        .Formulario textarea,
+        .Formulario select {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 20px;
+            font-size: 16px;
+            height: auto;
+            margin: 0;
+            outline: 0;
+            padding: 15px;
+            width: 80%;
+            background-color: #ffffff;
+            color: #000000;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+            margin-bottom: 30px;
+            
+        }
+
+        a:link, a:visited {
+            text-decoration: none;
+            cursor: auto;
+        }
+
+        a:link:active, a:visited:active {
+            text-decoration: none;
+        }
+
+        .Btn{
+            padding: 10px 20px;
+            margin: 5px;
+            border:none;
+            border-radius: 20px;
+            width: 100px;
+            background-color: white;
+        }
+
+        .Btn:hover{
+            background-color: rgb(0, 0, 0);
+            color:white;
+        }
+
+        @media screen and (max-width: 900px){
+            .Caja{
+            background-color: #6610F2;
+            width: 50%;
+            height: 50%;
+        }
+
+        }
+
+
+        @media screen and (max-width: 700px){
+            .Caja{
+            background-color: #6610F2;
+            width: 60%;
+            height: 50%;
+        }
+
+        }
+
+    </style>
+<div class="Contenedor">
+    <h1 class="Titulo">To-do</h1>
+<div class="Caja">
+    <form action="inicio.html" method="GET" class="Formulario">
+        <label for="name">Usuario</label>
+        <input type="text" id="name" name="user_name">
+        <br>
+
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="user_password">
+        <br>
+   </form>
+
+   <a href="registro.html" class="Btn">Enviar</a>
+   <a href="registro.html" class="Btn">Registrarse</a>
+
+</div>
+</div>
+</body>
+</html>
