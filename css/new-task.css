@@ -1,0 +1,72 @@
+body {
+    margin: 10px;
+}
+
+* {
+    font-family: 'Nunito';
+}
+
+/* Color library */
+
+    :root {
+        --brand-color: #6610F2;
+        --second-brand-color: #1A8FE3;
+        --first-color: #2EE696;
+        --second-color: #E6C229;
+        --third-color: #F17105;
+        --forth-color: #D11149;
+    }
+
+/* Side-nav*/
+
+.SideNav {
+    height: calc(100% - 20px);
+    width: 150px;
+    position: fixed;
+    border-radius: 30px;
+    text-align: center;
+
+    background-color: var(--brand-color);
+}
+
+.SideNav-logo {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+}
+
+.SideNav-secciones {
+    list-style: none;
+    padding: 0px;
+
+    height: calc(100% - 20px);
+
+    color: white;
+
+/* Posición de los iconos */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    
+}
+
+/* Tamaño iconos */
+.material-icons-outlined.md-48 { font-size: 48px; }
+
+/* ------- */
+
+
+/* Contenedor principal */
+
+.MainContainer {
+    display: flex;
+    float: inline-end;
+    justify-content: left;
+    width: calc(100% - 170px);
+}
+
+.MainContainer-sectionTitle {
+    margin-left: 5%;
+    margin-top: 4%;
+}
