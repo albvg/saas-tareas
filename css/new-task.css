@@ -59,14 +59,32 @@ body {
 
 /* Contenedor principal */
 
+.SectionTitle {
+    font-size: 40px;
+    font-weight: 700;
+    margin-left: 12%;
+    margin-top: 3%;
+    width: calc(100% - 200px);
+    float: left;
+}
+
 .MainContainer {
     display: flex;
     float: inline-end;
+    gap: 40px;
     justify-content: left;
-    width: calc(100% - 170px);
+    width: calc(100% - 200px);
 }
 
-.MainContainer-sectionTitle {
-    margin-left: 5%;
-    margin-top: 4%;
+.MainContainer-newTaskContainer {
+    background-color: lightgray;
+    height: calc(100vh - 200px);
+    width: calc(100% - 400px);
+    border-radius: 25px;
+}
+
+.MainContainer-logContainer {
+    width: 350px;
+    background-color: grey;
+    border-radius: 25px;
 }
