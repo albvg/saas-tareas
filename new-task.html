@@ -40,23 +40,46 @@
 <!-- Contenedor principal (Formulario de tareas) -->
 
 <h1 class="SectionTitle">Nueva tarea</h1>
+<div class="UserProfile">
+    <img class="UserProfile-img" src="img/no-picture-user.jpg" alt="">
+    <a class="UserProfile-title" href="">Mi Perfil</a>
+</div>
 
 <div class="MainContainer">
     
     <div class="MainContainer-newTaskContainer">
         
         <form class="MainContainer-newTaskContainer-taskForm">
-            <label for="tasl-title"> Título</label><br>
+            <label class="MainContainer-newTaskContainer-taskForm-labels" for="task-title">Título</label><br>
             <input class="MainContainer-newTaskContainer-taskForm-inputs" type="text" id="task-title"><br>
 
-            <label for="task-info">Descripción</label><br>
-            <textarea class="MainContainer-newTaskContainer-taskForm-inputs" name="" id="task-info" cols="30" rows="6"></textarea><br>
+            <label class="MainContainer-newTaskContainer-taskForm-labels" for="task-info">Descripción</label><br>
+            <textarea class="MainContainer-newTaskContainer-taskForm-inputs" name="" id="task-info" cols="30" rows="4"></textarea><br>
 
-            <label for="task-deadline">Fecha de vencimiento</label><br>
-            <input class="MainContainer-newTaskContainer-taskForm-inputs" type="date" id="task-deadline">
+            <label class="MainContainer-newTaskContainer-taskForm-labels" for="task-deadline">Fecha de vencimiento</label><br>
+            <input class="MainContainer-newTaskContainer-taskForm-inputs" type="date" id="task-deadline"><br>
 
-            <input type="checkbox" id="userCheckbox1" class="MainContainer-newTaskContainer-taskForm-checkbox">
-            <label for="userCheckbox1" class="MainContainer-newTaskContainer-taskForm-checkboxLabel"><img src="img/no-picture-user.jpg" alt="Foto de perfil"></label>
+            <label class="MainContainer-newTaskContainer-taskForm-labels">Añadir participantes</label><br>
+            <label class="MainContainer-newTaskContainer-taskForm-checkboxLabel">
+                <input class="MainContainer-newTaskContainer-taskForm-checkbox" type="checkbox">
+                <img class="MainContainer-newTaskContainer-taskForm-checkbox-img MainContainer-newTaskContainer-taskForm-checkbox-img--unchecked" src="img/no-picture-user-off.png">
+                <img class="MainContainer-newTaskContainer-taskForm-checkbox-img MainContainer-newTaskContainer-taskForm-checkbox-img--checked" src="img/no-picture-user-on.png">
+            </label>
+            <label class="MainContainer-newTaskContainer-taskForm-checkboxLabel">
+                <input class="MainContainer-newTaskContainer-taskForm-inputs MainContainer-newTaskContainer-taskForm-checkbox" type="checkbox">
+                <img class="MainContainer-newTaskContainer-taskForm-checkbox-img MainContainer-newTaskContainer-taskForm-checkbox-img--unchecked" src="img/no-picture-user-off.png">
+                <img class="MainContainer-newTaskContainer-taskForm-checkbox-img MainContainer-newTaskContainer-taskForm-checkbox-img--checked" src="img/no-picture-user-on.png">
+            </label>
+            <label class="MainContainer-newTaskContainer-taskForm-checkboxLabel">
+                <input class="MainContainer-newTaskContainer-taskForm-checkbox" type="checkbox">
+                <img class="MainContainer-newTaskContainer-taskForm-checkbox-img MainContainer-newTaskContainer-taskForm-checkbox-img--unchecked" src="img/no-picture-user-off.png">
+                <img class="MainContainer-newTaskContainer-taskForm-checkbox-img MainContainer-newTaskContainer-taskForm-checkbox-img--checked" src="img/no-picture-user-on.png">
+            </label>
+            <label class="MainContainer-newTaskContainer-taskForm-checkboxLabel">
+                <input class="MainContainer-newTaskContainer-taskForm-checkbox" type="checkbox">
+                <img class="MainContainer-newTaskContainer-taskForm-checkbox-img MainContainer-newTaskContainer-taskForm-checkbox-img--unchecked" src="img/no-picture-user-off.png">
+                <img class="MainContainer-newTaskContainer-taskForm-checkbox-img MainContainer-newTaskContainer-taskForm-checkbox-img--checked" src="img/no-picture-user-on.png">
+            </label><br>
 
             <button class="MainContainer-newTaskContainer-taskForm-submit">Crear tarea</button>
         </form>
