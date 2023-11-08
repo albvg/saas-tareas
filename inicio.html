@@ -32,6 +32,8 @@
 
         .Titulo{
             font-size: 100px;
+            margin: 0px;
+            margin-bottom: 40px;
         }
 
         label{
@@ -68,7 +70,7 @@
 
         a:link, a:visited {
             text-decoration: none;
-            cursor: auto;
+            cursor: pointer;
         }
 
         a:link:active, a:visited:active {
@@ -89,7 +91,17 @@
             color:white;
         }
 
+        .Text{
+            margin-block-start: 0px;
+            margin-block-end: 0px;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
         @media screen and (max-width: 900px){
+            .Contenedor{
+                flex-wrap: nowrap;
+            }
             .Caja{
             background-color: #6610F2;
             width: 50%;
@@ -100,17 +112,37 @@
 
 
         @media screen and (max-width: 700px){
+            .Btn{
+            padding: 8px 16px;
+            margin: 5px;
+            width: 80px;
+        }
+            .Contenedor{
+                flex-wrap: nowrap;
+            }
             .Caja{
             background-color: #6610F2;
-            width: 60%;
+            width: 50%;
             height: 50%;
+        }
+            .Titulo{
+            font-size: 80px;
         }
 
         }
+
+         
 
     </style>
 <div class="Contenedor">
+<div class="Info">
     <h1 class="Titulo">To-do</h1>
+    <p class="Text"> ¡Bienvenido a nuestra plataforma de gestión de proyectos! </p>
+    <p class="Text"> Estamos encantados de tenerte a bordo. Aquí encontrarás </p>
+    <p class="Text"> la herramienta perfecta para organizar tus proyectos, colaborar</p>
+    <p class="Text">  y llevar un seguimiento de tus tareas de manera eficiente. </p>
+
+</div>
 <div class="Caja">
     <form action="inicio.html" method="GET" class="Formulario">
         <label for="name">Usuario</label>

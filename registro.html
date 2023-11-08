@@ -22,7 +22,7 @@
         .Caja{
             background-color: #6610F2;
             width: 40%;
-            height: 70%;
+            height: 85%;
             display: flex;
             flex-direction: column;
             border-radius: 10%;
@@ -67,9 +67,18 @@
             
         }
 
+        .Term{
+            color:white;
+        }
+
+        .Term:hover{
+            color:black;
+            cursor: pointer;
+        }
+
         a:link, a:visited {
             text-decoration: none;
-            cursor: auto;
+            cursor: pointer;
         }
 
         a:link:active, a:visited:active {
@@ -93,7 +102,7 @@
         @media screen and (max-width: 900px){
             .Caja{
             width: 70%;
-            height: 75%;
+            height: 85%;
         }
 
         }
@@ -102,7 +111,13 @@
         @media screen and (max-width: 700px){
             .Caja{
             width: 80%;
-            height: 75%;
+            height: 85%;
+        }
+
+        .Btn{
+            padding: 8px 16px;
+            margin: 5px;
+            width: 80px;
         }
 
         }
@@ -112,7 +127,12 @@
 <div class="Contenedor">
 <div class="Caja">
     <form action="inicio.html" method="GET" class="Formulario">
-        <label for="name">Nombre Completo</label>
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="user_name">
+        <br> 
+
+        <label for="name">Usuario</label>
+        <br>
         <input type="text" id="name" name="user_name">
         <br> 
 
@@ -140,7 +160,7 @@
             <span class="label"><b>Terminos y condiciones:</b></span>
             <br>
         <input type="checkbox" id="development" value="interest_development" name="user_interest"><label
-            class="light" for="development">HE LEÍDO Y ACEPTO LOS <a href="politica-privacidad.html"><b>TÉRMINOS Y CONDICIONES</b></a></label><br>
+            class="light" for="development">HE LEÍDO Y ACEPTO LOS <a class="Term" href="politica-privacidad.html"><b>TÉRMINOS Y CONDICIONES</b></a></label><br>
    </form>
 
    <a href="inicio.html" class="Btn">Registrarse</a>
