@@ -27,7 +27,7 @@
 <nav class="SideNav">
     <img class="SideNav-logo" src="brand-img/logo.png" alt="Logo de To-do">
     <ul class="SideNav-secciones">
-        <li><span class="material-icons-outlined md-48"> dashboard </span></li>
+        <li><img src="icons/dash-disabled.png" alt=""><img src="icons/dash-active.png" alt=""></li>
         <li><span class="material-icons-outlined md-48"> note_alt </span></li>
         <li><span class="material-icons-outlined md-48"> task_alt </span></li>
         <li><span class="material-icons-outlined md-48"> groups </span></li>
@@ -127,7 +127,18 @@
                 btn.classList.toggle('is-active');
             });
         });
+
+    const icons = document.querySelectorAll('.material-icons-outlined')
+
+    icons.forEach(icon => {
+        icon.addEventListener('click', () => {
+                console.log("Hice Click en botón: "+num);
+                icons.classList.toggle('is-selected');
+            });
+        });
+     
 </script>
+
 
 <!-- ------ -->
 

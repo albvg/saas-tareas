@@ -44,8 +44,6 @@ body {
 
     height: calc(100% - 20px);
 
-    color: white;
-
 /* Posición de los iconos */
     display: flex;
     flex-direction: column;
@@ -54,8 +52,20 @@ body {
     
 }
 
+.material-icons-outlined {
+    color: white;
+    background-color: inherit;
+
+    --icon-color-selected:var(--brand-color);
+    --icon-bg-selected: white;
+}
+
+
 /* Tamaño iconos */
-.material-icons-outlined.md-48 { font-size: 48px; }
+.material-icons-outlined.md-48 { font-size: 48px; cursor: pointer; }
+
+:checked ~ .
+
 
 /* ------- */
 
