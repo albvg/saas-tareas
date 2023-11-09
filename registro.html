@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-do</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <style>
 
-* {
-    font-family: 'Nunito';
-}
+        * {
+            font-family: 'Nunito';
+        }
 
         .Contenedor{
             display: flex;
@@ -151,12 +153,9 @@
         <label for="rol">Rol</label>
         <br>
         <select id="rol" name="user_rol">
-                <option value="frontend_developer">Front-End Developer</option>
-                <option value="php_developer">PHP Developer</option>
-                <option value="python_developer">Python Developer</option>
-                <option value="rails_developer">Rails Developer</option>
-                <option selected value="web_designer">Web Designer (por defecto)</option>
-                <option disabled value="wordpress_developer">Wordpress Developer (deshabilitado)
+                <option value="teacher">Profesor</option>
+                <option value="student">Alumno</option>
+                <option selected value="collaborator">Colaborador</option>
                 </option>
         </select>
         <br>

@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>To-do</title>
+
+<!-- LINKS -->
+
+    <link rel="stylesheet" href="css/new-task.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
     rel="stylesheet"/>
 
@@ -11,11 +15,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- ------ -->
+
 </head>
 <body>
-    <style>
 
-:root {
+    <style>
+        body {
+    margin: 10px;
+    overflow-x: hidden;
+}
+
+* {
+    font-family: 'Nunito';
+}
+
+/* Color library */
+
+    :root {
         --brand-color: #6610F2;
         --second-brand-color: #1A8FE3;
         --first-color: #2EE696;
@@ -25,7 +43,9 @@
 
     }
 
-        .SideNav {
+/* Side-nav*/
+
+.SideNav {
     height: calc(100% - 20px);
     width: 150px;
     position: fixed;
@@ -58,8 +78,118 @@
     
 }
 
+/* Tamaño iconos */
+.material-icons-outlined.md-48 { font-size: 48px; }
+
+/* ------- */
+
+
+/* Contenedor principal */
+
+.SectionTitle {
+    font-size: 40px;
+    font-weight: 700;
+    margin-left: 12%;
+    margin-top: 3%;
+    width: calc(100% - 200px);
+    float: left;
+}
+
+.MainContainer {
+    display: grid;
+    justify-items: start;
+    float: inline-end;
+    gap: 30px;
+    width: 85%;
+    margin-left:150px;
+    margin-right:250px;
+}
+
+.MainContainer-calendar {
+    background-color: rgb(239, 238, 238);
+    box-shadow: 3px 4px 10px lightgray;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    margin-left: 200px;
+    display: grid;
+	grid-template-columns: repeat(5, 4fr);
+	gap: 10px; 
+    padding: 20px;
+}
+
+.Card {
+	border-radius: 10px;
+	min-height: 100px;
+	font-weight: bold;
+	padding: 0px;
+	position: relative;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+	width: 100%;
+    height: 250px;
+    background-color: white;
+    box-shadow: 2px 2px 2px lightgray;
+
+}
+
+.Card .Text {
+	height: 100%;
+	display: flex; 
+    flex-direction: column;
+	align-content:center; 
+    margin-left: 10px;
+}
+
+.Card--variant {
+    border-radius: 10px;
+	min-height: 100px;
+	font-weight: bold;
+	padding: 0px;
+	position: relative;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+	width: 100%;
+    height: 250px;
+    background-color: rgb(215, 215, 215);
+    box-shadow: 2px 2px 2px lightgray;
+}
+.Tarea{
+    background-color: rgb(237, 232, 232);
+    width: 100%;
+    height: 50px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    padding-left: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Tag{
+    width: 17px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: var(--forth-color);
+    margin-left: 10px;
+}
+
+.Tag--yellow{
+    background-color:  var(--second-color);
+}
+.Tag--blue{
+    background-color:  var(--second-brand-color);
+}
+
+.Tag--green{
+    background-color:  var(--first-color);
+}
+
     </style>
-    <!-- Nav -->
+    
+<!-- Nav -->
 
 <nav class="SideNav">
     <img class="SideNav-logo" src="brand-img/logo.png" alt="Logo de To-do">
@@ -72,5 +202,186 @@
     </ul>
 
 </nav>
+
+<!-- ------ -->
+
+<!-- Contenedor principal-->
+
+<h1 class="SectionTitle">Calendario Diciembre 2023</h1>
+
+<div class="MainContainer">
+    
+    <div class="MainContainer-calendar">
+        <div class="Card Card--variant">
+            <div class="Text">
+                <h3>Lunes 27</h3>
+                <div class="Tarea">
+                    <h5>Bocetos</h5>
+                    <div class="Tag Tag--yellow"></div>
+                </div>
+                <div class="Tarea">
+                    <h5>Exposición</h5>
+                    <div class="Tag"></div>
+                </div>
+            </div>
+        </div>
+        <div class="Card Card--variant">
+            <div class="Text">
+                <h3>Martes 28</h3>
+                <div class="Tarea">
+                    <h5>Asignar tareas</h5>
+                    <div class="Tag Tag--yellow"></div>
+                </div>
+            </div>
+        </div>
+        <div class="Card Card--variant">
+            <div class="Text">
+                <h3>Miércoles 29</h3>
+            </div>
+        </div>
+        <div class="Card Card--variant">
+            <div class="Text">
+                <h3>Jueves 30</h3>
+            </div>
+        </div>
+        <div class="Card">
+            <div class="Text">
+                <h3>Viernes 01</h3>
+            </div>
+        </div>
+        <div class="Card">
+            <div class="Text">
+                <h3>Lunes 04</h3>
+                <div class="Tarea">
+                    <h5>Presupuesto</h5>
+                    <div class="Tag"></div>
+                </div>
+                <div class="Tarea">
+                    <h5>Reunión</h5>
+                    <div class="Tag Tag--green"></div>
+                </div>
+            </div>
+        </div>
+        <div class="Card">
+            <div class="Text">
+                <h3>Martes 05</h3>
+            </div>
+        </div>
+        <div class="Card">
+            <div class="Text">
+                <h3>Miércoles 06</h3>
+                <div class="Tarea">
+                    <h5>Revisión</h5>
+                    <div class="Tag Tag--blue"></div>
+                </div>
+            </div>
+        </div>
+        <div class="Card">
+            <div class="Text">
+                <h3>Jueves 07</h3>
+            </div>
+        </div>
+        <div class="Card">
+            <div class="Text">
+                <h3>Viernes 08</h3>
+                <div class="Tarea">
+                    <h5><b><i>LIBRE</i></b></h5>
+                </div>
+            </div>
+        </div>
+        <div class="Card">
+            <div class="Text">
+                <h3>Lunes 11</h3>
+            </div>
+        </div>
+        <div class="Card">
+            <div class="Text">
+                <h3>Martes 12</h3>
+            </div>
+        </div>
+        <div class="Card">
+            <div class="Text">
+                <h3>Miércoles 13</h3>
+                <div class="Tarea">
+                    <h5>Correcciones</h5>
+                    <div class="Tag"></div>
+                </div>
+            </div>
+        </div>
+        <div class="Card">
+            <div class="Text">
+                <h3>Jueves 14</h3>
+                <div class="Tarea">
+                    <h5>Correcciones</h5>
+                    <div class="Tag"></div>
+                </div>
+                <div class="Tarea">
+                    <h5>Entrega</h5>
+                    <div class="Tag Tag--yellow"></div>
+                </div>
+            </div>
+        </div>
+        <div class="Card">
+            <div class="Text">
+                <h3>Viernes 15</h3>
+            </div>
+        </div>
+        <div class="Card">
+            <div class="Text">
+                <h3>Lunes 18</h3>
+            </div>
+        </div>
+        <div class="Card">
+            <div class="Text">
+                <h3>Martes 19</h3>
+            </div>
+        </div>
+        <div class="Card">
+            <div class="Text">
+                <h3>Miércoles 20</h3>
+            </div>
+        </div>
+        <div class="Card">
+            <div class="Text">
+                <h3>Jueves 21</h3>
+            </div>
+        </div>
+        <div class="Card">
+            <div class="Text">
+                <h3>Viernes 22</h3>
+            </div>
+        </div>
+        <div class="Card">
+            <div class="Text">
+                <h3>Lunes 25</h3>
+                <div class="Tarea">
+                    <h5><b><i>FELIZ NAVIDAD</i></b></h5>
+                </div>
+            </div>
+        </div>
+        <div class="Card">
+            <div class="Text">
+                <h3>Martes 26</h3>
+            </div>
+        </div>
+        <div class="Card">
+            <div class="Text">
+                <h3>Miércoles 27</h3>
+            </div>
+        </div>
+        <div class="Card">
+            <div class="Text">
+                <h3>Jueves 28</h3>
+            </div>
+        </div>
+        <div class="Card">
+            <div class="Text">
+                <h3>Viernes 29</h3>
+            </div>
+        </div>
+    </div>  
+
+</div>
+
 </body>
 </html>
