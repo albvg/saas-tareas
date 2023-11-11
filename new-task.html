@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do</title>
+
+<!-- LINKS -->
+
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/new-task.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+    rel="stylesheet"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- ------ -->
+
+</head>
+<body>
+    
+<!-- Nav -->
+
+<nav class="SideNav">
+    <img class="SideNav-logo" src="brand-img/logo.png" alt="Logo de To-do">
+    <ul class="SideNav-secciones">
+        <li><img src="icons/dash-disabled.png" alt=""><img src="icons/dash-active.png" alt=""></li>
+        <li><span class="material-icons-outlined md-48"> note_alt </span></li>
+        <li><span class="material-icons-outlined md-48"> task_alt </span></li>
+        <li><span class="material-icons-outlined md-48"> groups </span></li>
+        <li><span class="material-icons-outlined md-48"> calendar_month </span></li>
+    </ul>
+
+</nav>
+
+<!-- ------ -->
+
+<!-- Contenedor principal (Formulario de tareas) -->
+
+<h1 class="SectionTitle">Nueva tarea</h1>
+<div class="UserProfile">
+    <img class="UserProfile-img" src="img/no-picture-user.jpg" alt="">
+    <a class="UserProfile-title" href="">Mi Perfil</a>
+</div>
+
+<div class="MainContainer">
+    
+    <div class="MainContainer-newTaskContainer">
+        
+        <form class="MainContainer-newTaskContainer-taskForm">
+            <label class="MainContainer-newTaskContainer-taskForm-labels" for="task-title">Título</label><br>
+            <input class="MainContainer-newTaskContainer-taskForm-inputs" type="text" id="task-title"><br>
+
+            <label class="MainContainer-newTaskContainer-taskForm-labels" for="task-info">Descripción</label><br>
+            <textarea class="MainContainer-newTaskContainer-taskForm-inputs" name="" id="task-info" cols="30" rows="4"></textarea><br>
+
+            <label class="MainContainer-newTaskContainer-taskForm-labels" for="task-deadline">Fecha de vencimiento</label><br>
+            <input class="MainContainer-newTaskContainer-taskForm-inputs" type="date" id="task-deadline"><br>
+
+            <label class="MainContainer-newTaskContainer-taskForm-labels">Añadir participantes</label><br>
+            <label class="MainContainer-newTaskContainer-taskForm-checkboxLabel">
+                <input class="MainContainer-newTaskContainer-taskForm-checkbox" type="checkbox">
+                <img class="MainContainer-newTaskContainer-taskForm-checkbox-img MainContainer-newTaskContainer-taskForm-checkbox-img--unchecked" src="img/no-picture-user-off.png">
+                <img class="MainContainer-newTaskContainer-taskForm-checkbox-img MainContainer-newTaskContainer-taskForm-checkbox-img--checked" src="img/no-picture-user-on.png">
+            </label>
+            <label class="MainContainer-newTaskContainer-taskForm-checkboxLabel">
+                <input class="MainContainer-newTaskContainer-taskForm-inputs MainContainer-newTaskContainer-taskForm-checkbox" type="checkbox">
+                <img class="MainContainer-newTaskContainer-taskForm-checkbox-img MainContainer-newTaskContainer-taskForm-checkbox-img--unchecked" src="img/no-picture-user-off.png">
+                <img class="MainContainer-newTaskContainer-taskForm-checkbox-img MainContainer-newTaskContainer-taskForm-checkbox-img--checked" src="img/no-picture-user-on.png">
+            </label>
+            <label class="MainContainer-newTaskContainer-taskForm-checkboxLabel">
+                <input class="MainContainer-newTaskContainer-taskForm-checkbox" type="checkbox">
+                <img class="MainContainer-newTaskContainer-taskForm-checkbox-img MainContainer-newTaskContainer-taskForm-checkbox-img--unchecked" src="img/no-picture-user-off.png">
+                <img class="MainContainer-newTaskContainer-taskForm-checkbox-img MainContainer-newTaskContainer-taskForm-checkbox-img--checked" src="img/no-picture-user-on.png">
+            </label>
+            <label class="MainContainer-newTaskContainer-taskForm-checkboxLabel">
+                <input class="MainContainer-newTaskContainer-taskForm-checkbox" type="checkbox">
+                <img class="MainContainer-newTaskContainer-taskForm-checkbox-img MainContainer-newTaskContainer-taskForm-checkbox-img--unchecked" src="img/no-picture-user-off.png">
+                <img class="MainContainer-newTaskContainer-taskForm-checkbox-img MainContainer-newTaskContainer-taskForm-checkbox-img--checked" src="img/no-picture-user-on.png">
+            </label><br>
+
+            <button class="MainContainer-newTaskContainer-taskForm-submit">Crear tarea</button>
+        </form>
+
+    </div>    
+
+    <div class="MainContainer-tagsContainer">
+        <button class="MainContainer-tagsContainer-btn MainContainer-tagsContainer-btn--normal .MainContainer-tagsContainer-btn--normal">
+            Tarea normal
+        </button>
+        <button class="MainContainer-tagsContainer-btn MainContainer-tagsContainer-btn--importante">
+            Tarea importante
+        </button>
+        <button class="MainContainer-tagsContainer-btn MainContainer-tagsContainer-btn--urgente">
+            Tarea urgente
+        </button>
+    </div>
+
+</div>
+
+<!-- ------ -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- SCRIPTS -->
+
+<script>
+    const btns =document.querySelectorAll('.MainContainer-tagsContainer-btn')
+
+    let i=0;
+        btns.forEach(btn => {
+            i++;
+            let num=i;
+            btn.addEventListener('click', () => {
+                console.log("Hice Click en botón: "+num);
+                btn.classList.toggle('is-active');
+            });
+        });
+
+    const icons = document.querySelectorAll('.material-icons-outlined')
+
+    icons.forEach(icon => {
+        icon.addEventListener('click', () => {
+                console.log("Hice Click en botón: "+num);
+                icons.classList.toggle('is-selected');
+            });
+        });
+     
+</script>
+
+
+<!-- ------ -->
+
+</body>
+</html>

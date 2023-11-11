@@ -1,0 +1,175 @@
+/* Contenedor principal */
+
+.MainContainer {
+    display: grid;
+    justify-items: start;
+    grid-template-columns: 1fr 350px;
+
+    float: inline-end;
+    gap: 30px;
+    width: calc(100% - 200px);
+}
+
+
+/* -----------*/
+
+
+/* Creación de tareas */
+.MainContainer-newTaskContainer {
+    background-color: white;
+    box-shadow: 3px 4px 10px lightgray;
+    height: calc(100vh - 200px);
+    width: 100%;
+    border-radius: 25px;
+}
+
+.MainContainer-newTaskContainer-taskForm {
+    margin: 50px;
+    width: 90%;
+    height: 85%;
+}
+
+.MainContainer-newTaskContainer-taskForm-labels {
+    font-weight: 700;
+}
+
+.MainContainer-newTaskContainer-taskForm-inputs {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    font-size: 20px;
+    border-radius: 8px;
+    background-color: rgb(236, 236, 236);
+}
+
+.MainContainer-newTaskContainer-taskForm-btn {
+    padding: 15px 40px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    color: inherit;
+    box-shadow: 3px 4px 10px lightgray;
+    cursor: pointer;
+}
+
+/* -----------*/
+
+
+/* CHECKBOX DE PARTICIPANTES */
+
+.MainContainer-newTaskContainer-taskForm-checkboxLabel {
+    margin-right: 10px;
+}
+
+.MainContainer-newTaskContainer-taskForm-checkbox {
+    display: none;
+}
+
+.MainContainer-newTaskContainer-taskForm-checkbox-img {
+    width: 60px;
+    height: 60px;
+    box-shadow: 3px 4px 10px lightgrey;
+    border-radius: 50%;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.MainContainer-newTaskContainer-taskForm-checkbox-img--checked {
+    width: 60px;
+    height: 60px;
+    display: none;
+}
+
+:checked ~ .MainContainer-newTaskContainer-taskForm-checkbox-img--checked {
+    display: inline;
+}
+
+:checked ~ .MainContainer-newTaskContainer-taskForm-checkbox-img--unchecked {
+    display: none;
+}
+
+
+/* -----------*/
+
+
+
+.MainContainer-newTaskContainer-taskForm-submit {
+    padding: 25px 150px;
+    margin-top: 35px;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--brand-color);
+    color: white;
+    box-shadow: 3px 4px 10px lightgray;
+    cursor: pointer;
+}
+
+
+
+/* Etiquetas de prioridad de tareas*/
+.MainContainer-tagsContainer {
+    width: 330px;
+    border-radius: 25px;
+
+    grid-column-start: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.MainContainer-tagsContainer-btn {
+    border: 15px solid;
+    height: 220px;
+    border-radius: 20px;
+    box-shadow: 3px 4px 10px lightgray;
+    font-size: 30px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.MainContainer-tagsContainer-btn--normal {
+    border-color: var(--first-color);
+    color: var(--first-color);
+
+    --btn-color-active: white;
+    --btn-bg-active: var(--first-color);
+    --btn-border-active: var(--first-color);
+    
+}
+
+.MainContainer-tagsContainer-btn--importante {
+    border-color: var(--second-color);
+    color: var(--second-color);
+
+    --btn-color-active: white;
+    --btn-bg-active: var(--second-color);
+    --btn-border-active: var(--second-color);
+}
+
+.MainContainer-tagsContainer-btn--urgente {
+    border-color: var(--forth-color);
+    color: var(--forth-color);
+
+    --btn-color-active: white;
+    --btn-bg-active: var(--forth-color);
+    --btn-border-active: var(--forth-color);
+}
+
+.is-active {
+    color: var(--btn-color-active);
+    background-color: var(--btn-bg-active);
+    border-color: var(--btn-border-active);}
+
+
+/* -----------*/
