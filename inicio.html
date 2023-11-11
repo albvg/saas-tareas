@@ -4,171 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-do</title>
+    <link rel="stylesheet" href="css/new-task.css">
+    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="css/inicio.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+    rel="stylesheet"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <style>
-        * {
-        font-family: 'Nunito';
-        }
 
-        body{
-            background: linear-gradient(to right, #6610F2, white);
-            color:white;
-        }
-        .Contenedor{
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            align-items: center;
-            height: 100vh;
-            width: 100%;
-           /*background-color: aqua;*/
-            justify-content: space-evenly;
-        }
+    <!-- Nav -->
 
-        .Caja{
-            background-color: #6610F2;
-            width: 30%;
-            height: 50%;
-            display: flex;
-            flex-direction: column;
-            border-radius: 10%;
-            text-align: center;
-            align-items: center;
-            padding-top: 1%;
-            box-shadow: 8px 8px 15px rgb(84, 84, 84);
-        }
+<nav class="SideNav">
+    <a href="inicio.html"><img class="SideNav-logo" src="brand-img/logo.png" alt="Logo de To-do"></a>
+    <ul class="SideNav-secciones">
+        <li><a href="inicio.html"><span class="material-icons-outlined md-48"> dashboard </span></a></li>
+        <li><a href="new-task.html"><span class="material-icons-outlined md-48"> note_alt </span></a></li>
+        <li><a href="new-task.html"><span class="material-icons-outlined md-48"> task_alt </span></a></li>
+        <li><a href="user-list.html"><span class="material-icons-outlined md-48"> groups </span></a></li>
+        <li><a href="calendario.html"><span class="material-icons-outlined md-48"> calendar_month </span></a></li>
+    </ul>
 
-        .Titulo{
-            font-size: 100px;
-            margin: 0px;
-            margin-bottom: 40px;
-        }
+</nav>
 
-        label{
-            color:white;
-        }
+<!-- ------ -->
 
-        .Formulario {
-            margin: 10px auto;
-            padding: 10px 20px;
-            border-radius: 8px;
-            text-align: left;
-        }
+<!-- Contenedor principal-->
 
-        .Formulario input[type="text"],
-        .Formulario input[type="email"],
-        .Formulario input[type="password"],
-        .Formulario textarea,
-        .Formulario select {
-            background: rgba(255, 255, 255, 0.1);
-            border: none;
-            border-radius: 20px;
-            font-size: 16px;
-            height: auto;
-            margin: 0;
-            outline: 0;
-            padding: 15px;
-            width: 80%;
-            background-color: #ffffff;
-            color: #000000;
-            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
-            margin-bottom: 30px;
-            
-        }
+<h1 class="SectionTitle">Tus tareas</h1>
 
-        a:link, a:visited {
-            text-decoration: none;
-            cursor: pointer;
-        }
+<div class="MainContainer">
+    
+    <div class="MainContainer-calendar">
+        <div class="Card">
+            <h3>Pendientes</h3>
+            <div class="Tarea">
+                <h5>Iniciar bocetos</i></h5>
+                <div class="Tag Tag--yellow"></div>
+            </div>
+            <div class="Tarea">
+                <h5>Planificar reunión</h5>
+                <div class="Tag Tag--yellow"></div>
+            </div>
+        </div>
+        <div class="Card">
+            <h3>En Pausa</h3>
+            <div class="Tarea">
+                <h5>Iniciar bocetos</i></h5>
+                <div class="Tag Tag--blue"></div>
+            </div>
+        </div>
+        <div class="Card">
+            <h3>Terminadas</h3>
+            <div class="Tarea">
+                <h5>Lluvia de ideas</i></h5>
+                <div class="Tag Tag--green"></div>
+            </div>
+            <div class="Tarea">
+                <h5>Programar web</i></h5>
+                <div class="Tag Tag--green"></div>
+            </div>
+        </div>
+        <div class="Card">
+            <h3>Revisión</h3>
+            <div class="Tarea">
+                <h5>Presupuesto</i></h5>
+                <div class="Tag Tag--red"></div>
+            </div>
+        </div>
+    </div>
+    <div class="Historial">
+        <h1 class="Titulo">Actividad</h1>
+        <div class="Tarea Tarea--historial">
+            <h5>María ha completado la Tarea: <i>Bocetos</i></h5>
+        </div>
+        <div class="Tarea Tarea--historial">
+            <h5>Carlos ha pausado la Tarea: <i>Ideas</i></h5>
+        </div>
+        <div class="Tarea Tarea--historial">
+            <h5>María ha empezado la Tarea: <i>Planificación</i></h5>
+        </div>
 
-        a:link:active, a:visited:active {
-            text-decoration: none;
-        }
-
-        .Btn{
-            padding: 10px 20px;
-            margin: 5px;
-            border:none;
-            border-radius: 20px;
-            width: 100px;
-            background-color: white;
-        }
-
-        .Btn:hover{
-            background-color: rgb(0, 0, 0);
-            color:white;
-        }
-
-        .Text{
-            margin-block-start: 0px;
-            margin-block-end: 0px;
-            margin-inline-start: 0px;
-            margin-inline-end: 0px;
-        }
-
-        @media screen and (max-width: 900px){
-            .Contenedor{
-                flex-wrap: nowrap;
-            }
-            .Caja{
-            background-color: #6610F2;
-            width: 50%;
-            height: 50%;
-        }
-
-        }
-
-
-        @media screen and (max-width: 700px){
-            .Btn{
-            padding: 8px 16px;
-            margin: 5px;
-            width: 80px;
-        }
-            .Contenedor{
-                flex-wrap: nowrap;
-            }
-            .Caja{
-            background-color: #6610F2;
-            width: 50%;
-            height: 50%;
-        }
-            .Titulo{
-            font-size: 80px;
-        }
-
-        }
-
-         
-
-    </style>
-<div class="Contenedor">
-<div class="Info">
-    <h1 class="Titulo">To-do</h1>
-    <p class="Text"> ¡Bienvenido a nuestra plataforma de gestión de proyectos! </p>
-    <p class="Text"> Estamos encantados de tenerte a bordo. Aquí encontrarás </p>
-    <p class="Text"> la herramienta perfecta para organizar tus proyectos, colaborar</p>
-    <p class="Text">  y llevar un seguimiento de tus tareas de manera eficiente. </p>
-
+    </div>
 </div>
-<div class="Caja">
-    <form action="inicio.html" method="GET" class="Formulario">
-        <label for="name">Usuario</label>
-        <input type="text" id="name" name="user_name">
-        <br>
-
-        <label for="password">Contraseña</label>
-        <input type="password" id="password" name="user_password">
-        <br>
-   </form>
-
-   <a href="registro.html" class="Btn">Enviar</a>
-   <a href="registro.html" class="Btn">Registrarse</a>
-
-</div>
-</div>
+    
 </body>
 </html>
