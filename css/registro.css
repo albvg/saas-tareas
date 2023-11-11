@@ -1,0 +1,117 @@
+* {
+    font-family: 'Nunito';
+}
+
+.Contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+   /*background-color: aqua;*/
+    justify-content: space-evenly;
+}
+
+.Caja{
+    background-color: #6610F2;
+    width: 40%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10%;
+    text-align: center;
+    align-items: center;
+    padding-top: 1%;
+}
+
+label{
+    color:white;
+}
+
+.label{
+    color: white;
+}
+
+.Formulario {
+    margin: 10px auto;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.Formulario input[type="text"],
+.Formulario input[type="email"],
+.Formulario input[type="password"],
+.Formulario textarea,
+.Formulario select {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    height: auto;
+    margin: 0;
+    outline: 0;
+    padding: 15px;
+    width: 80%;
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+    margin-bottom: 30px;
+    
+}
+
+.Term{
+    color:white;
+}
+
+.Term:hover{
+    color:black;
+    cursor: pointer;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:link:active, a:visited:active {
+    text-decoration: none;
+}
+
+.Btn{
+    padding: 10px 20px;
+    margin: 5px;
+    border:none;
+    border-radius: 20px;
+    width: 100px;
+    background-color: white;
+}
+
+.Btn:hover{
+    background-color: rgb(0, 0, 0);
+    color:white;
+}
+
+@media screen and (max-width: 900px){
+    .Caja{
+    width: 70%;
+    height: 85%;
+}
+
+}
+
+
+@media screen and (max-width: 700px){
+    .Caja{
+    width: 80%;
+    height: 85%;
+}
+
+.Btn{
+    padding: 8px 16px;
+    margin: 5px;
+    width: 80px;
+}
+
+}

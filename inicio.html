@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do</title>
+    <link rel="stylesheet" href="css/new-task.css">
+    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="css/inicio.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+    rel="stylesheet"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Nav -->
+
+<nav class="SideNav">
+    <a href="inicio.html"><img class="SideNav-logo" src="brand-img/logo.png" alt="Logo de To-do"></a>
+    <ul class="SideNav-secciones">
+        <li><a href="inicio.html"><span class="material-icons-outlined md-48"> dashboard </span></a></li>
+        <li><a href="new-task.html"><span class="material-icons-outlined md-48"> note_alt </span></a></li>
+        <li><a href="new-task.html"><span class="material-icons-outlined md-48"> task_alt </span></a></li>
+        <li><a href="user-list.html"><span class="material-icons-outlined md-48"> groups </span></a></li>
+        <li><a href="calendario.html"><span class="material-icons-outlined md-48"> calendar_month </span></a></li>
+    </ul>
+
+</nav>
+
+<!-- ------ -->
+
+<!-- Contenedor principal-->
+
+<h1 class="SectionTitle">Tus tareas</h1>
+
+<div class="MainContainer">
+    
+    <div class="MainContainer-calendar">
+        <div class="Card">
+            <h3>Pendientes</h3>
+            <div class="Tarea">
+                <h5>Iniciar bocetos</i></h5>
+                <div class="Tag Tag--yellow"></div>
+            </div>
+            <div class="Tarea">
+                <h5>Planificar reunión</h5>
+                <div class="Tag Tag--yellow"></div>
+            </div>
+        </div>
+        <div class="Card">
+            <h3>En Pausa</h3>
+            <div class="Tarea">
+                <h5>Iniciar bocetos</i></h5>
+                <div class="Tag Tag--blue"></div>
+            </div>
+        </div>
+        <div class="Card">
+            <h3>Terminadas</h3>
+            <div class="Tarea">
+                <h5>Lluvia de ideas</i></h5>
+                <div class="Tag Tag--green"></div>
+            </div>
+            <div class="Tarea">
+                <h5>Programar web</i></h5>
+                <div class="Tag Tag--green"></div>
+            </div>
+        </div>
+        <div class="Card">
+            <h3>Revisión</h3>
+            <div class="Tarea">
+                <h5>Presupuesto</i></h5>
+                <div class="Tag Tag--red"></div>
+            </div>
+        </div>
+    </div>
+    <div class="Historial">
+        <h1 class="Titulo">Actividad</h1>
+        <div class="Tarea Tarea--historial">
+            <h5>María ha completado la Tarea: <i>Bocetos</i></h5>
+        </div>
+        <div class="Tarea Tarea--historial">
+            <h5>Carlos ha pausado la Tarea: <i>Ideas</i></h5>
+        </div>
+        <div class="Tarea Tarea--historial">
+            <h5>María ha empezado la Tarea: <i>Planificación</i></h5>
+        </div>
+
+    </div>
+</div>
+    
+</body>
+</html>

@@ -173,3 +173,18 @@
 
 
 /* -----------*/
+
+a:link, a:visited {
+    text-decoration: none;
+    cursor: pointer;
+    color:white;
+}
+
+a:link:active, a:visited:active {
+    text-decoration: none;
+    color:white;
+}
+
+a:hover{
+    color:black;
+}
