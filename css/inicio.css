@@ -93,6 +93,7 @@ body {
 .Historial{
     background-color: var(--second-brand-color);
     width: 350px;
+    padding-bottom: 30px;
     min-height: 80vh;
     height: 100%;
     border-radius: 50px;
