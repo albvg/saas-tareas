@@ -31,7 +31,7 @@ body {
     }
     
     a:hover{
-        color:black;
+        color:var(--second-brand-color)
     }
 
 /* Side-nav*/

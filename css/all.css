@@ -53,7 +53,6 @@ body {
 }
 
 .material-icons-outlined {
-    color: white;
     background-color: inherit;
 
     --icon-color-selected:var(--brand-color);
@@ -63,9 +62,6 @@ body {
 
 /* Tamaño iconos */
 .material-icons-outlined.md-48 { font-size: 48px; cursor: pointer; }
-
-:checked ~ .
-
 
 /* ------- */
 
@@ -80,6 +76,7 @@ body {
     width: 300px;
     height: 80px;
     border-radius: 20px;
+    z-index: 1;
 
     display: flex;
     justify-content: center;

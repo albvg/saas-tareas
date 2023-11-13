@@ -67,5 +67,11 @@ a:link:active, a:visited:active {
 }
 
 a:hover{
-    color:black;
+    color: var(--second-brand-color);
+}
+
+.material-icons-outlined--selected-page {
+    background-color: white;
+    color: var(--brand-color);
+    border-radius: 5px;
 }
