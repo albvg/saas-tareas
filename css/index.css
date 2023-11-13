@@ -17,6 +17,7 @@
     body{
         background: linear-gradient(to right, #6610F2,#7b4ef7, rgb(71, 59, 247), #3224f5);
         color:white;
+        overflow-y: hidden;
     }
     .Contenedor{
         display: flex;
