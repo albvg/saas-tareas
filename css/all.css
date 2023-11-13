@@ -54,9 +54,7 @@ body {
 
 .material-icons-outlined {
     background-color: inherit;
-
-    --icon-color-selected:var(--brand-color);
-    --icon-bg-selected: white;
+    padding: 8px;
 }
 
 

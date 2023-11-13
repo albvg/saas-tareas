@@ -31,7 +31,7 @@ body {
     }
     
     a:hover{
-        color:var(--second-brand-color)
+        color: #430f96;
     }
 
 /* Side-nav*/

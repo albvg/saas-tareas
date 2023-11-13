@@ -47,6 +47,7 @@
         font-family: 'Sniglet';
         margin: 0px;
         margin-bottom: 10px;
+        cursor: default;
     }
 
     label{
@@ -129,6 +130,7 @@
         margin-block-end: 0px;
         margin-inline-start: 0px;
         margin-inline-end: 0px;
+        cursor: default;
     }
 
     @media screen and (max-width: 900px){

@@ -177,7 +177,7 @@
 .material-icons-outlined--selected-page {
     background-color: white;
     color: var(--brand-color);
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
 a:link, a:visited {
@@ -192,5 +192,5 @@ a:link:active, a:visited:active {
 }
 
 a:hover{
-    color: var(--second-brand-color)
+    color: #430f96;
 }
